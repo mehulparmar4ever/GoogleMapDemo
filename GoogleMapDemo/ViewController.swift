@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         //Srt temp title
         self.title = "Please wait while fetching address"
 
-        
+        //Initially, added temp location address
         let latitude : CLLocationDegrees = 23.0271
         let longitude : CLLocationDegrees = 72.5085
     
