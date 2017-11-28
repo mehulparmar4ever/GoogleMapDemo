@@ -114,15 +114,15 @@ class ViewController: UIViewController {
                 if let lines = address.lines  {
                     if (lines.count > 0) {
                         if lines.count > 0 {
-                            if lines[0].length > 0 {
+                            if lines[0].count > 0 {
                                 strAddresMain = strAddresMain + lines[0]
                             }
                         }
                     }
                     
                     if lines.count > 1 {
-                        if lines[1].length > 0 {
-                            if strAddresMain.length > 0 {
+                        if lines[1].count > 0 {
+                            if strAddresMain.count > 0 {
                                 strAddresMain = strAddresMain + ", \(lines[1])"
                             } else {
                                 strAddresMain = strAddresMain + "\(lines[1])"
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
                         }
                     }
                     
-                    if (strAddresMain.length > 0) {
+                    if (strAddresMain.count > 0) {
                         print("strAddresMain : \(strAddresMain)")
                         
                         self.title = strAddresMain
@@ -141,7 +141,7 @@ class ViewController: UIViewController {
                         }
                         
                         if let administrativeArea = address.administrativeArea {
-                            if strSubTitle.length > 0 {
+                            if strSubTitle.count > 0 {
                                 strSubTitle = "\(strSubTitle), \(administrativeArea)"
                             }
                             else {
@@ -150,7 +150,7 @@ class ViewController: UIViewController {
                         }
 
                         if let country = address.country {
-                            if strSubTitle.length > 0 {
+                            if strSubTitle.count > 0 {
                                 strSubTitle = "\(strSubTitle), \(country)"
                             }
                             else {
@@ -159,7 +159,7 @@ class ViewController: UIViewController {
                         }
 
                         
-                        if strSubTitle.length > 0 {
+                        if strSubTitle.count > 0 {
                             self.addPin_with_Title(strAddresMain, subTitle: strSubTitle, location: location)
                         }
                         else {
